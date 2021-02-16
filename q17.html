@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script
+type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+</script>
+</head>
+<body>
+<div style="width:150px; height:150px; style:border:5px solid black;">
+<img id="SLIDE" alt="" src="" width="150px" height="150px" style="border:5px solid black"/> 
+</div>
+<script>
+$(document).ready(function(){
+ var arr = ["https://www.w3schools.com/tags/smiley.gif",
+            "https://picsum.photos/536/354",
+            "https://picsum.photos/id/237/536/354","https://picsum.photos/seed/picsum/536/354",
+	    "https://picsum.photos/id/870/536/354?grayscale&blur=2"]
+    var count = arr.length;
+        function Slide() {
+    $("#SLIDE").show("fast", function() {
+       $(this).attr("src", arr[(arr.length++) % count]);});
+    }
+    $(function() {
+        setInterval(Slide, 1000);
+    });
+});
+</script>
+</body>
+</html>

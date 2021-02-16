@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><script
+type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+</script>
+</head>
+<body>
+<div class="parent" style="color:red;border:1px solid;">
+<p>parent p </p>
+<div class="child" style="color:aqua; border:1px solid;">
+<p>child p </p>
+</div><div id="dummy"style="color:green";></div>
+</div>
+<script>
+$(document).ready(function(){
+$(".parent").bind('click',function(){
+$("#dummy").append("<p>newly added p tag</p>");
+$(".child").on("click",function(e){
+e.stopPropagation();
+});
+});
+});
+</script>
+</body>
+</html>

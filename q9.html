@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><script
+type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+</script>
+</head>
+<body>
+<label for="drop">Choose value</label>
+<select id="drop">
+  <option disabled selected value> select an option </option>
+  <option value="first">first value</option>
+  <option value="second">Second value</option>
+  <option value="third">third value</option>
+</select>
+<div id="main"><p>p tag in div</p>normal text in div</div>
+<script>
+$(document).ready(function(){
+$("#drop").bind('click',function(){
+$("#main").append(" "+$("#drop").val());});
+});
+</script>
+</body>
+</html>

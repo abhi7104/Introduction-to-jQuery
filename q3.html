@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><script
+type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+</script>
+</head>
+<body>
+<div class="main-new">
+<p>This is main-new</p>
+</div>
+<div class="dummy-new">
+<p>This is dummy-new</p>
+</div>
+<div class="sub">
+<p>This is sub</p>
+</div>
+<script>
+$(document).ready(function(){
+$("div[class$=-new]").css("color","red");
+});
+</script>
+</body>
+</html>

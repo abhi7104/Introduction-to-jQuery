@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><script
+type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+</script>
+</head>
+<body>
+<div id="click"><button>click</button></div>
+<script>
+$(document).ready(function(){
+$("#click").on('click','button',function(){
+$("#click").append("<button class='new'>new click</button>");
+});
+
+});
+</script>
+</body>
+</html>

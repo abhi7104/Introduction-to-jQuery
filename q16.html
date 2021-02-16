@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head><script
+type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+</script>
+<style>
+table, td,th{
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 2px;
+}
+</style>
+</head>
+<body>
+<table id="table">
+  <tr>
+    <th>Marks</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>abhishek</td>
+  </tr>
+  <tr>
+   <td>10</td>
+    <td >ram</td>
+  </tr>
+   <tr>
+  <td>9</td>
+    <td>raj</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>vansh</td>
+  </tr>
+   <tr>
+     <td>8</td>
+    <td>abhinav</td>
+  </tr>
+  <tr>
+   <td>15</td>
+    <td>dhruv</td>
+  </tr>
+</table>
+<button>CROSS</button>
+<script>
+function del(){
+var row = document.getElementById('table');
+row.deleteRow(0);
+}
+$(document).ready(function(){
+$("button").click(function(){
+$.ajax({
+url:"https://jsonplaceholder.typicode.com/posts/1",
+dataType:"json",
+type: "DELETE",
+success:function(result){
+del();
+},});
+});});
+</script>
+</body>
+</html>
+
